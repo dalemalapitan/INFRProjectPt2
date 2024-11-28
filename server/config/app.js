@@ -16,7 +16,7 @@ let app = express();
 
 // set up express session
 app.use(session({
-  secret:"SomeSecret",
+//  secret:"SomeSecret",
   saveUninitialized:false,
   resave:false
 }));
