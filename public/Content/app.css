@@ -15,9 +15,10 @@
     align-items: center; /*vertically centers*/
     justify-content: space-evenly; /*evenly distributes navbar items*/
 }
-#header .navbar-brand { /*Logo*/
+#navbar .navbar-brand { /*Logo*/
     color: #50C878;
-    font-size: 4vh;
+    max-height: 4vh;
+    width: auto;
     text-align: left;
     flex: 1;
     text-decoration: none; /*removes underline*/
