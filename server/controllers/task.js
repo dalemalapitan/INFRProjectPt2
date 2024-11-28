@@ -1,17 +1,27 @@
 // Import Task model
 const Task = require(../models.task");
 
+// Get all tasks
+exports.getAllTasks = async (req, res) => {
+  try {
+    const tasks = await Task.find();
+    res.render("Task/list", { tasks });
+  } catch (error) {
+    console.error("Error fetching tasks:", error);
+    res.status(500).send("Server Error");
+  }
+};
+
 // Create a new task
 const createTask = async (req, res) => {
   try {
-    const { title, priority, status, dueDate } = req.body;
-
+    const { Title, Description, Priority, Status, dueDate } = req.body;
     const newTask = new Task({
-      title,
-      priority,
-      status,
-      dueDate,
-
+      Title,
+      Decription,
+      Priority,
+      Status,
+      DueDate,
     });
 
     await newTask.save();
