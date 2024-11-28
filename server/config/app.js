@@ -14,6 +14,12 @@ let flash = require('connect-flash');
 let app = express();
 
 
+// set up express session
+app.use(session({
+//  secret:"SomeSecret",
+  saveUninitialized:false,
+  resave:false
+}));
 
 // initialize flash
 app.use(flash());
