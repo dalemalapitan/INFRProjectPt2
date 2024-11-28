@@ -1,0 +1,65 @@
+<%- include ../Partials/header.ejs %>
+<%- include ../Partials/main_nav.ejs %>
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1><%= title %></h1>
+            <br>
+            <% if(typeof displayName=='string' && displayName) { %>
+            <a href="/todoList/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plis-circle"></i> Add Task
+            </a>
+            <%}%>
+        <table class="table table-bordered table-striped table-hover">
+            <!--Table Header-->
+            <tr class="d-flex">
+                <% if(typeof displayName=='string' && displayName) { %>
+                    <th class="text-center col-2">Title</th>
+                    <th class="col-5">Description</th>
+                    <th class="text-center col-1">Priority</th>
+                    <th class="text-center col-2">Status</th>
+                    <th class="text-center col-1">dueDate</th>
+                    <td class="text-center col-1">
+                    <td class="text-center col-1">
+                <%} else { %>
+                    <th class="text-center col-2">Title</th>
+                    <th class="col-5">Description</th>
+                    <th class="text-center col-1">Priority</th>
+                    <th class="text-center col-2">Status</th>
+                    <th class="text-center col-1">dueDate</th>
+                <%} %>
+            </tr>
+            <% for(let count=0;count<todoList.length;count++) { %>
+            <tr class="d-flex">
+            <% if(typeof displayName=='string' && displayName) { %>
+                <td class="text-center col-2"><%= todoList[count].Title %></td>
+                <td class="col-5"><%= todoList[count].Description %></td>
+                <td class="text-center col-1"><%= todoList[count].Priority %></td>
+                <td class="text-center col-2"><%= todoList[count].Status %></td>
+                <td class="text-center col-1"><%= todoList[count].dueDate %></td>
+                    <td class="text-center col-1">
+                    <a href="/todoList/edit/<%= todoList[count]._id%>"
+                        class="btn btn-secondary btn-sm">
+                    <i class="fas fa-pencil-alt"></i>Edit
+                </a>
+                </td>
+                <td class="text-center col-1">
+                    <a href="/todoList/delete/<%= todoList[count]._id%>"
+                        class="btn btn-warning btn-sm">
+                    <i class="fas fa-trash-alt"></i>Delete
+                </a>
+                </td>
+                <%} else { %>
+                <td class="text-center col-2"><%= todoList[count].Title %></td>
+                <td class="col-5"><%= todoList[count].Description %></td>
+                <td class="text-center col-1"><%= todoList[count].Priority %></td>
+                <td class="text-center col-2"><%= todoList[count].Status %></td>
+                <td class="text-center col-1"><%= todoList[count].dueDate %></td>
+                <% } %>
+            </tr>
+            <% } %>
+        </table>
+        </div>
+    </div>
+</main> 
+<%- include ../Partials/footer.ejs %>

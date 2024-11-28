@@ -5,14 +5,25 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
 let app = express();
+let cors = require('cors')
+let userModel = require('../model/User');
+let User = userModel.User;
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
-let bookRouter = require('../routes/book');
-
+let todoRouter = require('../routes/todoList')
 
 // view engine setup
 app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');
+let session = require('express-session')
+let passport = require('passport')
+let passportLocal = require('passport-local')
+//let localStrategy = passportLocal.Strategy;
+let flash = require('connect-flash')
+//implement the user authentication
+passport.use(User.createStrategy());
+let localStrategy = passportLocal.Strategy;
+
 // getting-started.js
 const mongoose = require('mongoose');
 let DB = require('./db');
@@ -23,15 +34,23 @@ mongoDB.on('error',console.error.bind(console,'Connection Error'));
 mongoDB.once('open',()=>{
   console.log("Connected with the MongoDB")
 });
-mongoose.connect(DB.URI,{useNewURIParser:true,useUnifiedTopology:true})
-/* main().catch(err => console.log(err));
 
-async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/BookLib');
-  //await mongoose.connect('mongodb+srv://ahmedsheikh:Test123@cluster0.0f3pz.mongodb.net/');
+mongoose.connect(DB.URI,{useNewURIParser:true,
+  useUnifiedTopology:true
+})
+app.use(session({
+  secret: "SomeSecret", 
+  saveuninitialized: false,
+  resave: false
+}))
 
-  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
-}*/
+app.use(flash());
+//serialize and deserialize user info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser())
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -42,7 +61,7 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/bookslist',bookRouter);
+app.use('/todoList',todoRouter);
 // /project --> projectrouter
 // /contactus --> contactus
 
