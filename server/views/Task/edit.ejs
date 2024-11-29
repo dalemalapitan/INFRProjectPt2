@@ -7,11 +7,11 @@
     <form class="form" method="POST">
         <div class="form-group">
             <label for="titleTextField">Task</label>
-            <input type="text" class="form-control" id="titleTextField" placeholder="Enter the Task" name="Title" value="<%= Task.Title %>" required>
+            <input type="text" class="form-control" id="titleTextField" placeholder="Enter the Task Title" name="Title" value="<%= Task.Title %>" required>
         </div>
         <div class="form-group">
             <label for="descriptionTextField">Description</label>
-            <textarea type="text" class="form-control" id="descriptionTextField" placeholder="Enter the Description" name="Description" value="<%= Task.Description %>" required></textarea>
+            <textarea type="text" class="form-control" id="descriptionTextField" placeholder="Enter the Description" name="Description" required><%= Task.Description %></textarea>
         </div>
         <div class="form-group">
             <label for="priorityTextField">Priority</label>
@@ -19,15 +19,15 @@
         </div>
         <div class="form-group">
             <label for="statusTextArea">Status</label>
-            <input type="text" class="form-control" id="statusTextArea"  placeholder="enter the Status Level" name="Status" required><%= Task.Status %>
+            <input type="text" class="form-control" id="statusTextArea"  placeholder="Enter the Status Level" name="Status" value="<%= Task.Status %>" required>
         </div>
         <div class="form-group">
             <label for="dueDateTextField">Due Date</label>
-            <input type="text" class="form-control" id="dueDateTextField" placeholder="Due Date" name="dueDate" value="<%= Task.dueDate %>" required>
+            <input type="text" class="form-control" id="dueDateTextField" placeholder="Enter the Due Date" name="dueDate" value="<%= Task.dueDate %>" required>
         </div>
         <button class="btn btn-primary" type="submit">Submit
         <i class="fas fa-edit"></i></button>  
-        <a href="/artList" class="btn btn-warning">Cancel
+        <a href="/todoList" class="btn btn-warning">Cancel
         <i class="fas fa-undo"></i></a> <!-- directs to list page-->  
     </form>
 </div>
