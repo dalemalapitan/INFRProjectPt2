@@ -10,6 +10,6 @@ let taskModel = mongoose.Schema({
     dueDate:String,
 },
 {
-    collection:"tasks"
+    collection:"TaskMaster"
 });
 module.exports =mongoose.model('Task',taskModel);
