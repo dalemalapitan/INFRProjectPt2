@@ -22,7 +22,7 @@ main {
     color: #50C878; /* Pastel green */
     font-size: 2.2em;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
 }
 
@@ -49,11 +49,11 @@ main {
     margin-top: 30px;
     color: #2E3138; 
     font-size: 2em;
-    text-align: left;
+    text-align: center;
 }
 
 .aboutus p:last-of-type {
-    text-align: left;
+    text-align: center;
     font-size: 1.2em;
     font-style: italic;
     color: #6C6F7D; 
