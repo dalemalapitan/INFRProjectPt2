@@ -1,0 +1,91 @@
+/* Add a pastel green background */
+body {
+    background-color: #D3E9D7;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2E3138;
+}
+
+/* Style for the main content area */
+main.container {
+    margin-top: 20px;
+    background-color: ‎#D3E9D7; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Styling the heading */
+h1 {
+    font-size: 2.5rem;
+    color: #50C878; 
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Styling the paragraph */
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #6C6F7D; 
+}
+
+/* Styling the button for log in */
+.btn-primary {
+    background-color: #50C878; /* Pastel Green */
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #4CAF50; 
+}
+
+/* Styling the register button */
+.btn-secondary {
+    background-color: #6C6F7D; 
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.btn-secondary:hover {
+    background-color: #575C63; 
+}
+
+/* Features Section */
+.features h2 {
+    color: #50C878;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.features ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.features ul li {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    padding-left: 30px; /* Space for icons */
+    position: relative;
+    line-height: 1.5;
+}
+
+.features ul li i {
+    color: #50C878; /* Icon color */
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 1.5em;
+}
