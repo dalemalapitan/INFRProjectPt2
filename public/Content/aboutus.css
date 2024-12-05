@@ -1,1 +1,65 @@
+/* General Styles for About Us Page */
+body {
+    background-color: #DFF6DD; /* Soft pastel green */
+    font-family: 'Arial', sans-serif;
+    color: #2E3138; /* Dark gray for text */
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.aboutus {
+    background-color: #FFFFFF; /* White background for the content */
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px; /* Centered content with a max width */
+}
+
+.aboutus h2 {
+    color: #50C878; /* Pastel green for headings */
+    font-size: 1.8em; /* Slightly larger font for headings */
+    border-bottom: 2px solid #DAD2D8; /* Underline effect */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.aboutus p {
+    font-size: 1.2em; /* Larger font for readability */
+    line-height: 1.6; /* Increased line height for better text spacing */
+    margin-bottom: 20px;
+}
+
+.aboutus ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 20px 0;
+}
+
+.aboutus ul li {
+    position: relative;
+    padding-left: 30px; /* Space for custom icons */
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.aboutus ul li::before {
+    content: "\2713"; /* Unicode for a checkmark */
+    position: absolute;
+    left: 0;
+    color: #50C878; /* Green checkmark */
+    font-size: 1.3em;
+}
+
+.aboutus p:last-of-type {
+    font-weight: bold; /* Highlight the final paragraph */
+    text-align: center;
+}
+
 
