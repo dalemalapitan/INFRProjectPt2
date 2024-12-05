@@ -75,7 +75,7 @@ h1 {
 
 /* Table Headers (Title, Description, etc.) */
 table thead {
-    background-color: #50C878; 
+    background-color: #A8D5BA; 
     color: white;
     font-weight: bold;
 }
@@ -97,7 +97,7 @@ table tbody tr:nth-child(even) {
 }
 
 table tbody tr:nth-child(odd) {
-    background-color: #FFFFFF; /* White for odd rows */
+    background-color: #A8D5BA; /* White for odd rows */
 }
 
 /* Button Styling */
