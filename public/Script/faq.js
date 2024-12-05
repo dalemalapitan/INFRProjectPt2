@@ -1,19 +1,20 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const accordionItems = document.querySelectorAll('.accordion-item');
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const headers = document.querySelectorAll('.accordion-header');
 
-    accordionItems.forEach((item) => {
-        const header = item.querySelector('.accordion-header');
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isActive = item.classList.contains('active');
 
-        header.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            
-            // Close all accordions
-            accordionItems.forEach((i) => i.classList.remove('active'));
-            
-            // If not active, open the clicked accordion
-            if (!isActive) {
-                item.classList.add('active');
-            }
+                // Close all accordions
+                document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+
+                // Toggle active class for clicked item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
         });
     });
-});
+</script>
