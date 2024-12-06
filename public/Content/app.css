@@ -46,8 +46,82 @@
 
 #body {
     padding-top: 20vh;
+    background-color: #D8F3DC;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 main.container {
     margin-top: 20vh;
 }
+
+.container {
+  background-color: #ffffff; 
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Title Section */
+h1 {
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #50C878;
+    padding: 10px;
+    border-radius: 8px; 
+    margin-bottom: 20px;
+}
+.table-container {
+    background-color: #FFFFFFF; /* White background for the table container */
+    padding: 20px;
+    border-radius: 8px; /* Optional: rounded corners */
+
+/* Table Headers (Title, Description, etc.) */
+table thead {
+    background-color: #FFFFFF; 
+    color: white;
+    font-weight: bold;
+}
+
+/* Table Borders and Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: 1px solid #ccc; 
+    text-align: left;
+    padding: 15px;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #F5F5F5; /* Light grey for even rows */
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #A8D5BA; /* White for odd rows */
+}
+
+/* Button Styling */
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+}
+
+button.add-task {
+    background-color: #50C878; 
+}
+
+button.edit {
+    background-color: #6C6F7D; 
+}
+
+button.delete {
+    background-color: #FF6347; 
+}
+

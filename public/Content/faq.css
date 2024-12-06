@@ -1,0 +1,19 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaf7e4; /* Light green background */
+    color: #333;
+}
+
+main {
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: #50c878; /* Green for heading */
+    margin-bottom: 2rem;
+}
+
