@@ -124,6 +124,7 @@ button, a.btn {
     text-decoration: none; /* Removes underline for <a> */
     cursor: pointer;
     font-size: 14px;
+    margin: 10px;
 }
 
 button.add-task, a.btn.add-task {
@@ -139,17 +140,5 @@ button.delete, a.btn.delete {
     background-color: #FF6347; 
 }
 
-/*
-button.add-task {
-    background-color: #50C878; 
-}
-
-button.edit {
-    background-color: #6C6F7D; 
-}
-
-button.delete {
-    background-color: #FF6347; 
-}*/
 
 
