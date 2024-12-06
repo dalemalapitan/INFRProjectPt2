@@ -73,12 +73,13 @@ h1 {
     margin-bottom: 20px;
 }
 .table-container {
-    background-color: #FFFFFFF; /* White background for the table container */
+    background-color: #FFFFFF; /* White background for the table container */
     padding: 20px;
     border-radius: 8px; /* Optional: rounded corners */
+}
 
 /* Table Headers (Title, Description, etc.) */
-table thead {
+table header {
     background-color: #FFFFFF; 
     color: white;
     font-weight: bold;
@@ -113,6 +114,32 @@ button {
     cursor: pointer;
 }
 
+button, a.btn {
+    display: inline-block; /* Ensures consistent block-like behavior */
+    text-align: center;    /* Centers text inside the button */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none; /* Removes underline for <a> */
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button.add-task, a.btn.add-task {
+    font-weight: bold;
+    background-color: #50C878; 
+}
+
+button.edit, a.btn.edit {
+    background-color: #6C6F7D; 
+}
+
+button.delete, a.btn.delete {
+    background-color: #FF6347; 
+}
+
+/*
 button.add-task {
     background-color: #50C878; 
 }
@@ -123,5 +150,6 @@ button.edit {
 
 button.delete {
     background-color: #FF6347; 
-}
+}*/
+
 

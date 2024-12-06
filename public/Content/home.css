@@ -58,6 +58,23 @@ p {
     background-color: #575C63; 
 }
 
+.btn-danger {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+.Welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    height: auto;
+    text-align: center;
+}
+
 /* Features Section */
 .features h2 {
     color: #50C878;

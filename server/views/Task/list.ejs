@@ -7,7 +7,7 @@
             <h1><%= title %></h1>
             <br>
             <% if(typeof displayName=='string' && displayName) { %>
-            <a href="/todoList/add" class="btn btn-primary" role="button">
+            <a href="/todoList/add" class="btn btn-primary add-task" role="button">
                 <i class="fas fa-plis-circle"></i> Add Task
             </a>
             <%}%>
@@ -40,15 +40,15 @@
                 <td class="text-center col-1"><%= todoList[count].dueDate %></td>
                     <td class="text-center col-1">
                     <a href="/todoList/edit/<%= todoList[count]._id%>"
-                        class="btn btn-secondary btn-sm">
-                    <i class="fas fa-pencil-alt"></i>Edit
+                        class="btn btn-secondary btn-sm edit">
+                    <i class="fas fa-pencil-alt"></i> Edit
                 </a>
                 </td>
                 <td class="text-center col-1">
                     <a href="/todoList/delete/<%= todoList[count]._id%>"
-                        class="btn btn-danger btn-sm"
-                        onclick="return confirm('Are you sure you want to delete this artwork?');"> 
-                    <i class="fas fa-trash-alt"></i>Delete
+                        class="btn btn-danger btn-sm delete"
+                        onclick="return confirm('Are you sure you want to delete this Task?');"> 
+                    <i class="fas fa-trash-alt"></i> Delete
                 </a>
                 </td>
                 <%} else { %>
