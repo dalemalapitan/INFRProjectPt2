@@ -4,6 +4,8 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+require(path.join(__dirname, '..', 'server.js'));
+
 let app = express();
 let cors = require('cors')
 let userModel = require('../model/User');
