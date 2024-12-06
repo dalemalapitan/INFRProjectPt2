@@ -1,0 +1,31 @@
+<head>
+    <link rel='stylesheet' href='/Content/home.css' />
+</head>
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Welcome Message-->
+                <h1>Welcome to Your Task Manager</h1>
+                <p>Organize your tasks, stay on top of deadlines, and boost your productivity.</p>
+
+        <ng-container *ngIf="displayName; else loggedOut">
+            <a href="/logout" class="btn btn-danger btn-lg"><i class="fas fa-lg-sign-out-alt"></i>Log Out</a>    
+        </ng-container>
+        <ng-template #loggedOut>
+            <a href="/login" class="btn btn-primary btn-lg">Log In</a>
+            <a href="/register" class="btn btn-secondary btn-lg">Register</a>
+        </ng-template>
+
+            <!-- Features Section-->
+                <section class="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><i class="fas fa-check"></i> Create and manage tasks with ease</li>
+                    <li><i class="fas fa-tasks"></i> Set priorities and due dates</li>
+                    <li><i class="fas fa-calendar-day"></i> Track progress and deadlines</li>
+                </ul>
+                </section>
+        </div>
+    </div>
+</main>
